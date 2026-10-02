@@ -1,10 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vertex Ascent</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="description" content="Vertex Ascent is an independent game studio creating worlds that inspire you to grow. A little wonder. A new perspective. Your next ascent." />
+    <meta property="og:title" content="Vertex Ascent — There is more in you." />
+    <meta property="og:description" content="Independent games for a life of possibility." />
+    <meta property="og:type" content="website" />
+    <title>Vertex Ascent — There is more in you.</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="world" aria-hidden="true"><div class="world-fallback"><span></span><i></i></div><canvas id="world-canvas"></canvas></div>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#beginning" aria-label="Vertex Ascent home">
+        <span class="brand-symbol"><img src="./VertexAscentLogo1.png" alt="" width="2048" height="1152" /></span>
+        <span>VERTEX<br />ASCENT<span class="brand-studio">INDEPENDENT GAME STUDIO</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="#purpose">Our purpose</a><a href="#worlds">Our worlds</a><a href="#studio">The studio <span aria-hidden="true">↗</span></a></nav>
+      <button class="motion-toggle" type="button" aria-pressed="false" aria-label="Pause ambient animation"><span class="motion-icon" aria-hidden="true">Ⅱ</span><span class="motion-label">MOTION ON</span></button>
+      <div class="reading-progress" aria-hidden="true"><span></span></div>
+    </header>
+    <nav class="chapter-nav" aria-label="Chapters">
+      <a href="#beginning" aria-label="01 — The beginning" aria-current="location"><span>01</span><i></i></a>
+      <a href="#purpose" aria-label="02 — Our purpose"><span>02</span><i></i></a>
+      <a href="#worlds" aria-label="03 — Our worlds"><span>03</span><i></i></a>
+      <a href="#studio" aria-label="04 — The studio"><span>04</span><i></i></a>
+    </nav>
+    <main id="main" tabindex="-1">
+      <section class="hero chapter" id="beginning" data-chapter="0" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow intro"><span class="pixel-star" aria-hidden="true">✦</span> SMALL STUDIO. INFINITE POSSIBILITY.</p>
+          <h1 id="hero-title"><span class="title-line">THERE IS</span><span class="title-line">MORE <em>in you.</em></span></h1>
+          <p class="description intro">We make games for the person<br />you’re becoming.</p>
+          <a class="journey-link intro" href="#purpose"><span class="button-square" aria-hidden="true">↘</span> BEGIN YOUR ASCENT <span class="link-line" aria-hidden="true"></span></a>
+        </div>
+        <div class="scene-note" aria-hidden="true"><span class="crosshair">+</span><span>A WORLD OF POSSIBILITY<br /><b>WAITING TO BE FOUND</b></span></div>
+        <div class="chapter-bottom"><a class="scroll-cue" href="#purpose"><span class="mouse" aria-hidden="true"></span> SCROLL TO DISCOVER</a><span class="bottom-mantra">PLAY. GROW. BECOME.</span><span>01 / 04</span></div>
+      </section>
+      <section class="story chapter" id="purpose" data-chapter="1" aria-labelledby="purpose-title">
+        <div class="story-stage">
+          <div class="chapter-copy">
+            <p class="eyebrow" data-reveal><span class="chapter-number">01 /</span> THE REASON WE CREATE</p>
+            <h2 id="purpose-title" data-reveal>A little wonder.<br />A different<br /><em>kind of power.</em></h2>
+            <p class="description" data-reveal>Some games stay with you long after the screen goes dark. A spark of courage. A new perspective. A reminder that you can go further.</p>
+            <p class="quiet-copy" data-reveal>That’s what we’re here to make.</p>
+            <div class="small-statement" data-reveal><span class="pixel-star" aria-hidden="true">✦</span><span>NOT EVERY SUPERPOWER<br />EXISTS INSIDE A GAME.</span></div>
+          </div>
+          <div class="world-label" aria-hidden="true"><span class="label-line"></span> 001 — FIND YOUR SPARK</div>
+          <div class="chapter-bottom"><span>BUILT ON A BELIEF IN YOU</span><span>02 / 04</span></div>
+        </div>
+      </section>
+      <section class="story chapter" id="worlds" data-chapter="2" aria-labelledby="worlds-title">
+        <div class="story-stage">
+          <div class="chapter-copy">
+            <p class="eyebrow" data-reveal><span class="chapter-number">02 /</span> WORLDS WORTH GETTING LOST IN</p>
+            <h2 id="worlds-title" data-reveal>Leave the<br />ordinary.<br /><em>Find your more.</em></h2>
+            <p class="description" data-reveal>New places to explore. Mountains worth climbing. Moments that make you feel a little more alive.</p>
+            <div class="development-note" data-reveal><span class="status-dot" aria-hidden="true"></span><div><span class="mono">OUR NEXT CHAPTER IS TAKING SHAPE</span><p>New worlds are in the making. More when they’re ready.</p></div></div>
+          </div>
+          <div class="world-label" aria-hidden="true"><span class="label-line"></span> 002 — KEEP GOING UP</div>
+          <div class="chapter-bottom"><span>CURIOSITY IS A GOOD COMPASS</span><span>03 / 04</span></div>
+        </div>
+      </section>
+      <section class="story story-finale chapter" id="studio" data-chapter="3" aria-labelledby="studio-title">
+        <div class="story-stage">
+          <div class="finale-copy">
+            <p class="eyebrow" data-reveal><span class="pixel-star" aria-hidden="true">✦</span> INDEPENDENT IN SPIRIT. HOPEFUL BY DESIGN.</p>
+            <h2 id="studio-title" data-reveal>The best part?<br /><em>You’re just beginning.</em></h2>
+            <p class="description" data-reveal>We’re Vertex Ascent. A small, independent game studio<br class="desktop-break" /> with a simple belief: play can bring out the best in us.</p>
+            <p class="finale-signoff" data-reveal>Here’s to what comes next.</p>
+            <a class="journey-link" href="#beginning" data-reveal><span class="button-square" aria-hidden="true">↑</span> ANOTHER LOOK UP <span class="link-line" aria-hidden="true"></span></a>
+          </div>
+          <div class="chapter-bottom"><span>YOUR POTENTIAL HAS NO CEILING</span><span>04 / 04</span></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-heading"><a href="#beginning">VERTEX ASCENT<span aria-hidden="true">↗</span></a><p>GAMES FOR A LIFE<br />OF POSSIBILITY.</p></div>
+      <div class="footer-bottom"><p>© <span id="year">2026</span> Vertex Ascent</p><span>MADE WITH HOPE. MEANT FOR YOU.</span><a href="#beginning">BACK TO THE BEGINNING ↑</a></div>
+    </footer>
+  </body>
 </html>
