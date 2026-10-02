@@ -73,6 +73,7 @@ export class App {
     }
     if (active !== this.currentChapter) {
       this.currentChapter = active;
+      document.body.dataset.chapter = String(active);
       document.querySelectorAll('.chapter-nav a, .main-nav a').forEach(link => {
         if (link.getAttribute('href') === `#${this.sections[active].id}`) link.setAttribute('aria-current', 'location');
         else link.removeAttribute('aria-current');

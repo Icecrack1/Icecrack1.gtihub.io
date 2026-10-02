@@ -24,6 +24,7 @@ The site follows the Take Care Studios reference architecture: a semantic HTML d
 - `src/styles/main.css`: typography, responsive layouts, and static artwork.
 - `src/app/App.ts`: motion preference, chapter navigation, progress, and reveals.
 - `src/scenes/AscentScene.ts`: procedural islands, portal, crystal, stars, and scene transitions.
+- `src/scenes/BlackHole.ts`: the first chapter’s violet pixel-art black hole, with an opaque center, a glowing rim, and a slowly orbiting particle disk. Its shared scene clock respects the motion toggle and background-tab pause.
 - `VertexAscentLogo1.png`: original studio logo, displayed through a CSS crop without modifying the source.
 - `public/fonts/`: self-hosted Roboto and its license.
 

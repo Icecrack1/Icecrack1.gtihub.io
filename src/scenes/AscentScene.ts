@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { BlackHole } from './BlackHole';
 
 const clamp = THREE.MathUtils.clamp;
 const lerp = THREE.MathUtils.lerp;
@@ -15,6 +16,7 @@ export class AscentScene {
   private stars!: THREE.Points;
   private dust!: THREE.Points;
   private portal!: THREE.Group;
+  private blackHole!: BlackHole;
   private crystal!: THREE.Group;
   private chapter = 0;
   private paused = false;
@@ -139,11 +141,8 @@ export class AscentScene {
     this.hero.add(island);
     this.portal = new THREE.Group();
     this.portal.position.set(0, .95, -.9);
-    const ring = new THREE.Mesh(new THREE.TorusGeometry(1.6, .022, 5, 96), this.white);
-    this.portal.add(ring, this.halo(1.6, .85));
-    const outer = new THREE.Mesh(new THREE.TorusGeometry(1.71, .005, 3, 96, Math.PI * 1.57), new THREE.MeshBasicMaterial({ color: 0x666666 }));
-    outer.rotation.z = -.4;
-    this.portal.add(outer);
+    this.blackHole = new BlackHole();
+    this.portal.add(this.blackHole);
     this.hero.add(this.portal);
     for (let i = 0; i < 16; i++) {
       const step = new THREE.Mesh(new THREE.BoxGeometry(.78, .095, .27), this.light);
@@ -163,9 +162,6 @@ export class AscentScene {
       rock.rotation.set(this.random(), this.random(), this.random());
       this.hero.add(rock);
     }
-    const star = this.makeStar(.17);
-    star.position.set(0, .95, -.85);
-    this.portal.add(star);
   }
 
   private makeStar(size: number): THREE.Group {
@@ -273,6 +269,7 @@ export class AscentScene {
     });
     this.hero.rotation.y = -.3 + Math.sin(t * .12) * .045;
     this.portal.rotation.z = Math.sin(t * .15) * .025;
+    this.blackHole.update(t);
     this.crystal.rotation.y = t * .17;
     this.crystal.rotation.z = Math.sin(t * .24) * .1;
     this.spark.rotation.z = Math.sin(t * .13) * .08;
